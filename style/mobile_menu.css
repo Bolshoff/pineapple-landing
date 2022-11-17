@@ -1,0 +1,199 @@
+.hamburger-menu{
+    position: relative;
+    left:-147px;
+    width: 380px;
+}
+#menu__toggle {
+    opacity: 0;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -78px;
+    left: 312px;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #101010;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    visibility: hidden;
+    top: -65px;
+    right: 50px;
+    width: 378px;
+    /*width: 100%;*/
+    height: 961px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    z-index: 200;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+
+    left: 0;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    transition-duration: .25s;
+}
+
+.menu__box a{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3A3A3A;
+    margin-bottom: 20px;
+}
+.menu__nav a{
+    margin-bottom: 20px;
+}
+.menu__nav{
+    position: relative;
+    top: 15px;
+    left: 10px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3A3A3A;
+}
+
+.menu__title{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #3A3A3A;
+    opacity: 0.4;
+}
+.menu__other{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 35px;
+    left: 10px;
+    align-items: start;
+}
+.menu__nav a{
+    margin-bottom: 20px;
+}
+.menu__documentation{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 55px;
+    left: 10px;
+    align-items: start;
+    text-align: start;
+}
+.menu__documentation a{
+    margin-bottom: 20px;
+}
+.menu__contacts{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 83px;
+    left: 10px;
+    align-items: start;
+}
+.menu__contacts a{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #009933;
+}
+.menu__download-links{
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 83px;
+    left: 10px;
+    align-items: start;
+
+}
+.menu__download-links-title{
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #3A3A3A;
+    opacity: 0.4;
+}
+.menu__download-links-buttons{
+    display: flex;
+    flex-direction: column;
+
+}
+.menu__download-app-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 12px;
+    width: 150px;
+    height: 20px;
+    left: 16px;
+    top: 733px;
+    background: #FFFFFF;
+    border: 1px solid #3A3A3A;
+    border-radius: 100px;
+
+}
+.menu__download-links a{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3A3A3A;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
